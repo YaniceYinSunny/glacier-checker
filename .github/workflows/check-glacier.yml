@@ -12,6 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Debug: list repo files
+        run: |
+          echo "=== ROOT ==="
+          ls -1
+          echo "=== RECURSIVE ==="
+          ls -R .
+          
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8'
