@@ -1,3 +1,4 @@
+import os
 import time
 import requests
 import undetected_chromedriver as uc
@@ -8,9 +9,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # === Telegram 配置 ===
-TELEGRAM_BOT_TOKEN = "8148480036:AAFvJMvexeCZHFUJf-aNzwrEQ5ZxyIhZNh8"
-TELEGRAM_CHAT_ID = "7105335144"
-
+TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
+TELEGRAM_CHAT_ID  = os.environ["TELEGRAM_CHAT_ID"]
 # === 所有日期 + 酒店需求 ===
 CHECKLIST = [
     ("07-10-2025", "Village Inn at Apgar"),
